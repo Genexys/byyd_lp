@@ -1,0 +1,202 @@
+.main-about-lp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 1300px;
+  padding: 0 50px;
+  margin: auto;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    @for $i from 1 through 7 {
+      $colors: #000000, #FFF06F, #D30C3B, #DF1F22, #1b2949, #3B292F, #0c0524, #041024, #009DBC, #E32011, #E1BF3C, #4A7FAE, #801313, #FEAC38, #1D1D1D, #2c1204, #4F8CFE, #ADC582, #FFE70E, #f03c2a, #338DC7, #7F8080, #E83740, #F9A630, #599EE0, #AF813C, #49B4DA, #F89409, #141E4E, #FD8517, #BC112A, #E30613, #5395B9, #BE1B33, #A1A7A8, #0055A5, #A7A9AC, #20512F, #5395B9, #66779B, #bc393e, #a3c38f, #bc393e, #AC37C6, #E9222A, #684860, #213E80,#213E80;
+      $i: 1;
+      @each $color in $colors {
+      .image-#{$i} {
+        // border-color: $color;
+        a {
+          background-image: url("img/clients/#{$i}.png");
+          }
+        }
+        $i: $i + 1;
+      }
+    }
+  }
+}
+.image-item {
+  margin-top: 30px;
+  border-radius: 100%;
+  border: 2px solid black;
+  will-change: transform;
+  transform: scale(1);
+  transition: all .7s;
+  &:hover {
+    will-change: transform;
+    animation: scale 1s ease-in-out;
+  }
+  @keyframes scale{
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: .6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  a {
+    display: flex;
+    height: 311px;
+    width: 311px;
+    border-radius: 100%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 80%;
+    cursor: pointer;
+  }
+}
+.btn-load {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 80px;
+  width: 355px;
+  height: 65px;
+  border: 4px solid #7b9db0;
+  border-radius: 100px;
+  font-size: 30px;
+  font-family: RobotoRegular, sans-serif;
+  color: #7b9db0;
+  cursor: pointer;
+}
+.image-2 {
+  background-color: #34526d;
+}
+.image-5 {
+  background-color: #1b2949;
+}
+.image-7 {
+  background-color: #0c0524;
+}
+.image-8 {
+  background-color: #041024;
+}
+.image-12 {
+  background-color: #004B8D;
+}
+.image-15 {
+  a {
+    background-size: contain;
+  }
+}
+.image-16 {
+  background-color: #2c1204;
+}
+.image-20 {
+  background-color: #f03c2a;
+}
+.image-26 {
+  a {
+  background-size: 57%;
+  }
+}
+.image-25 {
+  a {
+  background-size: 70%;
+  }
+}
+.image-33 {
+  a {
+  background-size: cover;
+  }
+}
+.image-37 {
+  a {
+  background-size: initial;
+  }
+}
+.image-39 {
+  a {
+  background-size: initial;
+  }
+}
+.image-40 {
+  a {
+  background-size: 50%;
+  }
+}
+.image-41 {
+  a {
+  background-size: 70%;
+  }
+}
+.image-42 {
+  a {
+  background-color: #a3c38f;
+  }
+}
+.image-44 {
+  a {
+  background-size: cover;
+  }
+}
+.image-46 {
+  a {
+  background-size: cover;
+  }
+}
+.image-47 {
+  a {
+  background-size: 70%;
+  }
+}
+@media all and (max-width: 1057px) {
+  .main-about-lp{
+    ul {
+      justify-content: space-around;
+    }
+  }
+}
+
+@media all and (max-width: 370px) {
+  .main-about-lp {
+    margin-top: 30px;
+    a {
+      height: 250px;
+      width: 250px;
+      background-size: 59%;
+    }
+  }
+  .image-33 {
+    a {
+      background-size: cover;
+    }
+  }
+  .image-34 {
+    a {
+      background-position: 0 5px;
+      background-size: cover;
+    }
+  }
+  .image-44 {
+    a {
+      background-size: cover;
+      background-position: 0 10px;
+    }
+  }
+  .image-46 {
+    a {
+      background-size: cover;
+    }
+  }
+  .btn-load {
+    width: 300px;
+  }
+}
